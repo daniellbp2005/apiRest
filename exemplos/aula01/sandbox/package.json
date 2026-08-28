@@ -1,0 +1,17 @@
+{
+  "name": "sandbox",
+  "version": "1.0.0",
+  "main": "argumentos.js",
+  "scripts": {
+    "start": "node argumentos.js",
+    "check": "node --check argumentos.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "private": true,
+  "devDependencies": {
+    "prettier": "^3.9.6"
+  }
+}

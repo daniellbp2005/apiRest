@@ -1,0 +1,10 @@
+qnd começar um projeto no node, usa sempre esse comando:
+npm init -y
+
+$env:TURMA="";
+
+// `` só aceita string e int, pq são de um nivél. Pois são objetos de um nivél Object: array, objeto e matrix, ele nao mostra.
+const atualizado = { ...original, estoque: 5 }; // Isso é uma copia do obejeto acima um spreed. Os três pontos diz ao js q é um spreed.
+const { nome, estoque } = atualizado;
+
+.

@@ -1,0 +1,17 @@
+{
+  "name": "api_produtos",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js .env",
+    "check": "node --check app.js",
+    "produto-ausente": "node app.js .env 999",
+    "id-invalido": "node app.js .env abc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "type": "commonjs",
+  "private": true
+}
