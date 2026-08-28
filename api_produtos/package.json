@@ -6,7 +6,8 @@
     "start": "node app.js .env",
     "check": "node --check app.js",
     "produto-ausente": "node app.js .env 999",
-    "id-invalido": "node app.js .env abc"
+    "id-invalido": "node app.js .env abc",
+    "diagnostico": "node app.js"
   },
   "keywords": [],
   "author": "",

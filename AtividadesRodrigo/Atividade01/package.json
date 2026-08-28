@@ -1,0 +1,13 @@
+{
+  "name": "atividade-01-diagnostico-ambiente",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node index.js",
+    "check": "node --check index.js && node --check test/index.test.cjs",
+    "test": "node --test test/index.test.cjs"
+  },
+  "engines": {
+    "node": ">=24"
+  }
+}

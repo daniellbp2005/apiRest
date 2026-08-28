@@ -1,0 +1,10 @@
+{
+  "name": "atividade-01-scripts-npm",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "check": "node --check index.js && node --check test/index.test.cjs",
+    "test": "node --test test/index.test.cjs",
+    "start": "node index.js"
+  }
+}
