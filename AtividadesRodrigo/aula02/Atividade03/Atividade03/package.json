@@ -1,0 +1,11 @@
+{
+  "name": "atividade-02-promise-pedido",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node index.js PED-104",
+    "pedido-ausente": "node index.js PED-999",
+    "check": "node --check index.js && node --check test/index.test.cjs",
+    "test": "node --test test/index.test.cjs"
+  }
+}
