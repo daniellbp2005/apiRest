@@ -1,0 +1,12 @@
+{
+  "name": "atividade-03-catalogo-isolado",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node index.js Medição",
+    "categoria-ausente": "node index.js Soldagem",
+    "check": "node check.js && node --check test/index.test.cjs",
+    "test": "node --test test/index.test.cjs"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "atividade-03-formatador-nomeado",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node index.js 149.9",
+    "valor-invalido": "node index.js abc",
+    "check": "node check.js && node --check test/index.test.cjs",
+    "test": "node --test test/index.test.cjs"
+  }
+}

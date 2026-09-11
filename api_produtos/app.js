@@ -17,7 +17,7 @@ async function executar() {
       listarCategorias(),
     ]);
 
-    console.table({
+    console.log({
       produto: {
         id: produto.id,
         nome: produto.nome,
