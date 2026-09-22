@@ -1,8 +1,23 @@
 [
-    {
-        "id": 1,
-        "nome": "Teclado",
-        "estoque": 4,
-        "categoria": "Periféricos"
-    }
+  {
+    "id": 1,
+    "nome": "Teclado",
+    "preco": 150,
+    "estoque": 4,
+    "categoria": "Periféricos"
+  },
+  {
+    "id": 2,
+    "nome": "Monitor",
+    "preco": 300.9,
+    "estoque": 10,
+    "categoria": "geral"
+  },
+  {
+    "id": 3,
+    "nome": "Nikolas Cage",
+    "preco": 9999.9,
+    "estoque": 10,
+    "categoria": "geral"
+  }
 ]

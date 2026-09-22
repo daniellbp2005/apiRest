@@ -6,7 +6,7 @@ export default class Produto {
     if (typeof nome != "string" || nome.trim() === "") {
       throw new TypeError("O tipo de nome deve ser string");
     }
-    if (!Number.isInteger(preco) || preco < 0 || !Number.isFinite(preco)) {
+    if (preco < 0 || !Number.isFinite(preco)) {
       throw new TypeError("Preco deve ser inteiro e finito, e maior que zero");
     }
     if (
