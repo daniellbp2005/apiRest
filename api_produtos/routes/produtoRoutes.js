@@ -1,10 +1,10 @@
 import express from "express";
 import { resolve } from "node:path";
-import { criarCatalogoArquivo } from "../catalogo/catalogoArquivo.js";
+import { criarCatalogoArquivo } from "../catalogo/catalogoArquivo.js"; // ELE NÃO CRIA A FUNÇÃO JUNTO COM O EXPRESS, ELE IMPORTA
 
 const caminhoCatalogo =
   process.env.CATALOGO_ARQUIVO ||
-  resolve(import.meta.dirname, "../data/produtos.json");
+  resolve(import.meta.dirname, "../data/produtos.json"); // BANCO, API, OR O PROPRIO .JSON ?
 const catalogo = criarCatalogoArquivo(caminhoCatalogo);
 
 export const produtosRoutes = express.Router();
@@ -33,7 +33,7 @@ produtosRoutes.post("/", async (req, res) => {
 
 produtosRoutes.get("/:id", async (req, res, next) => {
   try {
-    const id = Number(req.params.id); // Params, é p se referenciar ao parametro da url, nessa caso o id
+    const id = Number(req.params.id); // Params, é p se referenciar ao parametro da url, nessa caso o id g
     if (!Number.isInteger(id))
       return res.status(400).json({
         erro: "Id deve ser inteiro",
