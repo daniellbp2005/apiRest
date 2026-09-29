@@ -1,4 +1,4 @@
-const nomeObrigatorios = ["PORT", "NOME_ALUNO", "TURMA"];
+const nomeObrigatorios = ["PORT", "DB_HOST", "DB_PORT", "DB_USER", "DB_NAME"]; // DB_PASS vai ficar de fora pois como usamos o xampp, ou o mysql sem config de segurança a senha é vazia
 
 export function carregarAmbiente(arquivoDeConfig) {
   if (arquivoDeConfig) {

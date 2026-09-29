@@ -1,0 +1,8 @@
+CREATE TABLE
+    IF NOT EXISTS produtos (
+        id INT auto_increment PRIMARY KEY,
+        nome VARCHAR(255) NOT NULL,
+        preco DECIMAL(10, 2) NOT NULL,
+        estoque INT NOT NULL DEFAULT 0,
+        categoria VARCHAR(100) NOT NULL
+    );
