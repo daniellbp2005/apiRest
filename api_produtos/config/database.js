@@ -1,11 +1,12 @@
 // criando o pull de conexão com o banco de dados, como o serve já existe só damos o pull, pq se não fica um monilito no qual onde criamos o server aqui
 import mysql from "mysql2/promise";
+
 export function criarPool() {
   // cria o pull de conexão q vai acessar o servidor
   return mysql.createPool({
     host: process.env.DB_HOST,
-    port: Number(process.env.PORT),
-    user: process.envDB_USER,
+    port: Number(process.env.DB_PORT || 3306),
+    user: process.env.DB_USER,
     password: process.env.DB_PASS || "",
     database: process.env.DB_NAME,
     connectionLimit: 10, // limite de conexões simultanêas

@@ -14,16 +14,16 @@ export function criarProdutoModel({ pool }) {
 
   async function criar(produto) {
     const sql =
-      "INSERT INTO produtos (nome,preco,estoque,categoria) VALUES (?, ?, ?, ?)";
+      "INSERT INTO produtos (nome, preco, estoque, categoria) VALUES (?, ?, ?, ?)";
 
-    const [valores] = [
+    const valores = [
       produto.nome,
       produto.preco,
       produto.estoque,
       produto.categoria,
     ];
 
-    const resultado = await pool.query(sql, valores);
+    const [resultado] = await pool.query(sql, valores);
     return { ...produto, id: resultado.insertId };
   }
   return { listarTodos, buscarPorId, criar };
