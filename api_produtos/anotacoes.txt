@@ -84,3 +84,12 @@ async function executar() {
 }
 
 executar();
+
+
+comando p baixar o docker:
+
+docker run -d --name mysql-server -p 3309:3306 -e MYSQL_ROOT_PASSWORD=senai@123 -e MYSQL_ROOT_HOST=% -v mysql_data:/var/lib/mysql --restart no mysql:latest
+
+se der falha de virtuaçozação n suportada use esse:
+
+runas /user:EDUC123.sp.senai.br\sn1076642  "wsl.exe --install"

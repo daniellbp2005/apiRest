@@ -13,7 +13,7 @@ const produtoModel = criarProdutoModel({ pool });
 const produtoService = criarProdutoService({ produtoModel });
 const produtoController = criarProdutoController({ produtoService });
 const produtoRoutes = criarProdutoRoutes({ produtoController });
-
+    
 app.get("/api/check", (req, res) => {
   res.status(200).json({ status: "ok" });
 });
