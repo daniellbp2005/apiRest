@@ -1,41 +1,35 @@
 export default class Produto {
-  constructor({ id, nome, preco, estoque = 0, categoria }) {
-    if (!Number.isInteger(id) || id <= 0) {
-      throw new TypeError("Id deve ser inteiro e positivo");
+    constructor({
+        id, nome, preco, estoque = 0, categoria
+    }) {
+        if (!Number.isInteger(id) || id <= 0) {
+            throw new TypeError('ID deve ser um inteiro positivo');
+        }
+        if (typeof nome !== 'string' || nome.trim() === '') {
+            throw new TypeError('Nome é obrigatório');
+        }
+        if (!Number.isFinite(preco) || preco < 0) {
+            throw new TypeError('Preço deve ser um número maior ou igual a zero');
+        }
+        if (!Number.isInteger(estoque) || estoque < 0) {
+            throw new TypeError('Estoque deve ser válido');
+        }
+        if (typeof categoria !== 'string' || categoria.trim() === '') {
+            throw new TypeError('Categoria é obrigatória');
+        }
+        this.id = id;
+        this.nome = nome.trim();
+        this.preco = preco;
+        this.estoque = estoque;
+        this.categoria = categoria.trim();
     }
-    if (typeof nome != "string" || nome.trim() === "") {
-      throw new TypeError("O tipo de nome deve ser string");
+    calcularValorEmEstoque() {
+        return this.preco * this.estoque;
     }
-    if (preco < 0 || !Number.isFinite(preco)) {
-      throw new TypeError("Preco deve ser inteiro e finito, e maior que zero");
+    calcularPrecoComDesconto(percentual) {
+        if (!Number.isFinite(percentual) || percentual < 0 || percentual > 100) {
+            throw new RangeError('Desconto deve estar entre 0 e 100');
+        }
+        return this.preco * (1 - percentual / 100);
     }
-    if (
-      !Number.isInteger(estoque) ||
-      !Number.isFinite(estoque) ||
-      estoque < 0
-    ) {
-      throw new TypeError("Estoque inválido, olhe aqui");
-    }
-    if (typeof categoria != "string" || categoria.trim() === "") {
-      throw new TypeError("O tipo de categoria deve ser string");
-    }
-
-    Object.assign(this, {
-      id,
-      nome: nome.trim(),
-      preco,
-      estoque,
-      categoria: categoria.trim(),
-    });
-  }
-
-  calcularValorEmEstoque() {
-    return this.preco * this.estoque;
-  }
-  calcularPrecoComDesconto(percentual) {
-    if (!Number.isFinite(percentual) || percentual <= 0 || percentual > 100) {
-      throw new RangeError("Desconto deve estar enre 0 a 100");
-    }
-    return this.preco * (1 - percentual / 100);
-  }
 }
